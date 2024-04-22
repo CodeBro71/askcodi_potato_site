@@ -3,61 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irish Potato Famine of the 19th Century</title>
+<title>Great Irish Potato Famine</title>
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f2f2f2;
+        background-color: #f7f7f7;
     }
-    
-    header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    main {
+    .container {
         max-width: 800px;
-        margin: 20px auto;
+        margin: 0 auto;
         padding: 20px;
         background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+        color: #333;
+    }
+    p {
+        color: #666;
+    }
+    .tab {
+        display: none;
     }
 </style>
 </head>
 <body>
-
-<header>
-    <h1>Irish Potato Famine of the 19th Century</h1>
-</header>
-
-<main>
-    <section>
+<div class="container">
+    <h1>The Great Irish Potato Famine</h1>
+    <nav>
+        <button onclick="openTab('overview')">Overview</button>
+        <button onclick="openTab('causes')">Causes</button>
+        <button onclick="openTab('impact')">Impact</button>
+        <button onclick="openTab('sources')">Sources</button>
+    </nav>
+    <div id="overview" class="tab">
         <h2>Overview</h2>
-        <p>The Irish Potato Famine was a period of mass starvation and disease in Ireland from 1845 to 1852. It was caused by a potato blight that destroyed the potato crops, which were the main food source for the Irish population at the time.</p>
-    </section>
-
-    <section>
+        <p>The Great Irish Potato Famine, also known as the Great Hunger, was a period of mass starvation and disease in Ireland from 1845 to 1852.</p>
+    </div>
+    <div id="causes" class="tab">
         <h2>Causes</h2>
-        <p>The main cause of the famine was the Phytophthora infestans, a fungus-like organism that attacked the potato crops and led to their failure. The reliance on potatoes as a staple food source, the oppressive British colonial rule, and the lack of proper food distribution also contributed to the severity of the famine.</p>
-    </section>
-
-    <section>
+        <p>The main cause of the famine was the failure of the potato crop, which was the primary food source for the Irish population.</p>
+    </div>
+    <div id="impact" class="tab">
         <h2>Impact</h2>
-        <p>The Irish Potato Famine resulted in the deaths of over a million people and the emigration of another million. It led to widespread poverty, disease, and social upheaval in Ireland, with long-lasting effects on the country's population and economy.</p>
-    </section>
-
-    <section>
+        <p>The famine resulted in the deaths of over 1 million people and the emigration of 1 million more.</p>
+    </div>
+    <div id="sources" class="tab">
         <h2>Sources</h2>
-        <p>For more information, you can visit the following sources:<br>
-        - <a href="https://www.history.com/topics/immigration/irish-potato-famine">History.com - Irish Potato Famine</a><br>
-        - <a href="https://en.wikipedia.org/wiki/Great_Famine_(Ireland)">Wikipedia - Great Famine (Ireland)</a></p>
-    </section>
-</main>
-
+        <p>Sources: <a href="https://www.history.com/topics/immigration/irish-potato-famine">History.com</a></p>
+    </div>
+</div>
+<script>
+    function openTab(tabName) {
+        var i, tabcontent;
+        tabcontent = document.getElementsByClassName("tab");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
 </body>
 </html>
+
